@@ -15,7 +15,7 @@ int main() {
     
     result=n1%2;
     
-    switch(result) {
+    switch(result) {  // result kullanmadan switch(number%2) kullanılabilir
         
         case 1: printf("your number is odd");
         break;
