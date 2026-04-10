@@ -17,11 +17,20 @@ int main() {
         case 'e': //ascii degeri:69
         case 'i':
         case 'o':
-        case 'u': printf(" %c sesli harfdir",letter);
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U': printf(" %c sesli harfdir",letter);
         break;
         
         default: {
-        if(('a'<=letter) && (letter<= 'z')) { printf(" %c sessiz harfdir",letter);} // if (a<b<c) seklinde yazılamaz ascii degerleri icinde '' kullanmayı unutma. 
+        if((('A'<=letter) && (letter<= 'Z')) || ('a'<=letter) && (letter<='z')) { printf(" %c sessiz harfdir",letter);} // if (a<b<c) seklinde yazılamaz ascii degerleri icinde '' kullanmayı unutma. 
+        
+         /*A ile z arasında özel karakterlerde vardır A=65 Z=90 ,,, a=97 z=122 ,, ^ =94  _ =95 ,,,
+        bu yüzden A<letter<z şeklinde yazmadım aralarda özel karakterler var. ama A-Z arasında ve a-z arasında sadece harfler bulunur.
+        bu yuzden || ikisinden birinin arasında olması yeterli diye bu işareti kullandım.*/
         
         // char letter; dendiğinde a harfine bastığımızda otomatik olarak a nın ascii değerini saklar yani letter=65 dir, tekrar tırnak kullanmaya gerek yok.
         else { printf("bu bir harf değil");}
